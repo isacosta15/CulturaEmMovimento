@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Administração | Cultura em Movimento</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <script src="/js/theme.js"></script>
+</head>
+<body>
+<main class="admin-wrap">
+  <a href="/">← Voltar ao site</a>
+  <p class="eyebrow">Área restrita</p>
+  <h1>Administração</h1>
+  <p>Gerencie mensagens recebidas e experiências virtuais da Cultura em Movimento.</p>
+
+  <section class="admin-panel" id="login-panel">
+    <h2>Acesso administrativo</h2>
+    <label for="admin-token">Token de acesso</label>
+    <input id="admin-token" type="password" autocomplete="current-password" placeholder="Informe o token configurado em ADMIN_TOKEN">
+    <button type="button" class="btn btn-primary" id="login-button">Entrar</button>
+    <p class="admin-message" id="login-message" role="status" aria-live="polite"></p>
+  </section>
+
+  <div id="dashboard" class="hidden">
+    <section class="admin-panel">
+      <div class="admin-head">
+        <h2>Mensagens recebidas</h2>
+        <button type="button" class="btn-secondary" id="refresh-messages">Atualizar</button>
+      </div>
+      <div id="messages-list"></div>
+    </section>
+
+    <section class="admin-panel">
+      <h2 id="experience-form-title">Cadastrar experiência 3D</h2>
+      <p>Use um modelo público do Sketchfab e copie o link oficial de incorporação (Embed).</p>
+      <form id="experience-form">
+        <label for="exp-title">Título</label>
+        <input id="exp-title" required minlength="3" maxlength="100">
+        <label for="exp-description">Descrição</label>
+        <textarea id="exp-description" maxlength="500" rows="3"></textarea>
+        <label for="exp-url">URL de incorporação do Sketchfab</label>
+        <input id="exp-url" type="url" required placeholder="https://sketchfab.com/models/ID/embed">
+        <div class="admin-actions">
+          <button class="btn btn-primary" id="exp-submit" type="submit">Cadastrar experiência</button>
+          <button class="btn-secondary hidden" id="exp-cancel" type="button">Cancelar edição</button>
+        </div>
+        <p class="admin-message" id="experience-message" role="status" aria-live="polite"></p>
+      </form>
+      <div id="experiences-list"></div>
+    </section>
+
+    <div class="admin-actions">
+      <button type="button" class="btn-secondary" id="logout-button">Sair</button>
+    </div>
+  </div>
+</main>
+<script src="/js/admin.js"></script>
+</body>
+</html>

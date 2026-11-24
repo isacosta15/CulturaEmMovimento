@@ -1,0 +1,194 @@
+[
+  {
+    "id": "masp",
+    "name": "Museu de Arte de São Paulo Assis Chateaubriand",
+    "city": "São Paulo",
+    "state": "SP",
+    "region": "Sudeste",
+    "address": "Avenida Paulista, 1578, Bela Vista, São Paulo - SP",
+    "website": "https://masp.org.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Museu%20de%20Arte%20de%20S%C3%A3o%20Paulo%20Assis%20Chateaubriand%20S%C3%A3o%20Paulo",
+    "category": "Museu de arte",
+    "tags": [
+      "arte",
+      "cultura",
+      "exposições"
+    ]
+  },
+  {
+    "id": "pinacoteca",
+    "name": "Pinacoteca de São Paulo",
+    "city": "São Paulo",
+    "state": "SP",
+    "region": "Sudeste",
+    "address": "Praça da Luz, 2, Luz, São Paulo - SP",
+    "website": "https://pinacoteca.org.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Pinacoteca%20de%20S%C3%A3o%20Paulo%20S%C3%A3o%20Paulo",
+    "category": "Museu de arte",
+    "tags": [
+      "arte brasileira",
+      "artes visuais",
+      "exposições"
+    ]
+  },
+  {
+    "id": "museu-do-ipiranga",
+    "name": "Museu do Ipiranga",
+    "city": "São Paulo",
+    "state": "SP",
+    "region": "Sudeste",
+    "address": "Parque da Independência, s/n, Ipiranga, São Paulo - SP",
+    "website": "https://museudoipiranga.org.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Museu%20do%20Ipiranga%20S%C3%A3o%20Paulo",
+    "category": "Museu histórico",
+    "tags": [
+      "história",
+      "independência",
+      "memória"
+    ]
+  },
+  {
+    "id": "museu-da-lingua-portuguesa",
+    "name": "Museu da Língua Portuguesa",
+    "city": "São Paulo",
+    "state": "SP",
+    "region": "Sudeste",
+    "address": "Praça da Luz, s/n, Luz, São Paulo - SP",
+    "website": "https://museudalinguaportuguesa.org.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Museu%20da%20L%C3%ADngua%20Portuguesa%20S%C3%A3o%20Paulo",
+    "category": "Museu temático",
+    "tags": [
+      "língua portuguesa",
+      "literatura",
+      "cultura"
+    ]
+  },
+  {
+    "id": "mam-sp",
+    "name": "Museu de Arte Moderna de São Paulo (MAM)",
+    "city": "São Paulo",
+    "state": "SP",
+    "region": "Sudeste",
+    "address": "Parque Ibirapuera, Avenida Pedro Álvares Cabral, s/n, São Paulo - SP",
+    "website": "https://mam.org.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Museu%20de%20Arte%20Moderna%20de%20S%C3%A3o%20Paulo%20(MAM)%20S%C3%A3o%20Paulo",
+    "category": "Museu de arte",
+    "tags": [
+      "arte moderna",
+      "arte contemporânea",
+      "ibirapuera"
+    ]
+  },
+  {
+    "id": "museu-afro-brasil",
+    "name": "Museu Afro Brasil Emanoel Araujo",
+    "city": "São Paulo",
+    "state": "SP",
+    "region": "Sudeste",
+    "address": "Parque Ibirapuera, Avenida Pedro Álvares Cabral, s/n, São Paulo - SP",
+    "website": "https://museuafrobrasil.org.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Museu%20Afro%20Brasil%20Emanoel%20Araujo%20S%C3%A3o%20Paulo",
+    "category": "Museu de arte e cultura",
+    "tags": [
+      "cultura afro-brasileira",
+      "história",
+      "ibirapuera"
+    ]
+  },
+  {
+    "id": "museu-do-futebol",
+    "name": "Museu do Futebol",
+    "city": "São Paulo",
+    "state": "SP",
+    "region": "Sudeste",
+    "address": "Praça Charles Miller, s/n, Pacaembu, São Paulo - SP",
+    "website": "https://museudofutebol.org.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Museu%20do%20Futebol%20S%C3%A3o%20Paulo",
+    "category": "Museu temático",
+    "tags": [
+      "futebol",
+      "esporte",
+      "cultura popular"
+    ]
+  },
+  {
+    "id": "museu-do-amanha",
+    "name": "Museu do Amanhã",
+    "city": "Rio de Janeiro",
+    "state": "RJ",
+    "region": "Sudeste",
+    "address": "Praça Mauá, 1, Centro, Rio de Janeiro - RJ",
+    "website": "https://museudoamanha.org.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Museu%20do%20Amanh%C3%A3%20Rio%20de%20Janeiro",
+    "category": "Museu de ciências",
+    "tags": [
+      "ciência",
+      "sustentabilidade",
+      "tecnologia"
+    ]
+  },
+  {
+    "id": "mnba",
+    "name": "Museu Nacional de Belas Artes",
+    "city": "Rio de Janeiro",
+    "state": "RJ",
+    "region": "Sudeste",
+    "address": "Avenida Rio Branco, 199, Centro, Rio de Janeiro - RJ",
+    "website": "https://mnba.gov.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Museu%20Nacional%20de%20Belas%20Artes%20Rio%20de%20Janeiro",
+    "category": "Museu de arte",
+    "tags": [
+      "arte brasileira",
+      "belas artes",
+      "história da arte"
+    ]
+  },
+  {
+    "id": "mar-rio",
+    "name": "Museu de Arte do Rio (MAR)",
+    "city": "Rio de Janeiro",
+    "state": "RJ",
+    "region": "Sudeste",
+    "address": "Praça Mauá, 5, Centro, Rio de Janeiro - RJ",
+    "website": "https://museudeartedorio.org.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Museu%20de%20Arte%20do%20Rio%20(MAR)%20Rio%20de%20Janeiro",
+    "category": "Museu de arte",
+    "tags": [
+      "arte",
+      "cultura carioca",
+      "exposições"
+    ]
+  },
+  {
+    "id": "inhotim",
+    "name": "Instituto Inhotim",
+    "city": "Brumadinho",
+    "state": "MG",
+    "region": "Sudeste",
+    "address": "Rua B, 20, Inhotim, Brumadinho - MG",
+    "website": "https://www.inhotim.org.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Instituto%20Inhotim%20Brumadinho",
+    "category": "Centro de arte contemporânea",
+    "tags": [
+      "arte contemporânea",
+      "jardim botânico",
+      "instalações"
+    ]
+  },
+  {
+    "id": "museu-oscar-niemeyer",
+    "name": "Museu Oscar Niemeyer",
+    "city": "Curitiba",
+    "state": "PR",
+    "region": "Sul",
+    "address": "Rua Marechal Hermes, 999, Centro Cívico, Curitiba - PR",
+    "website": "https://www.museuoscarniemeyer.org.br/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Museu%20Oscar%20Niemeyer%20Curitiba",
+    "category": "Museu de arte",
+    "tags": [
+      "arte",
+      "arquitetura",
+      "design"
+    ]
+  }
+]
