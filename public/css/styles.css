@@ -1,3 +1,4 @@
+
 /* ==========================================================
    Cultura em Movimento - Estilos
    ========================================================== */
@@ -18,13 +19,12 @@
   --placeholder: #6f655a;
   --danger: #ff8a8a;
 
-  --primary: #ff5a36;      /* laranja vibrante */
+  --primary: #ff5a36;
   --primary-dark: #e0431f;
-  --accent: #2ec4b6;       /* turquesa */
-  --accent-2: #ffc845;     /* amarelo */
+  --accent: #2ec4b6;
+  --accent-2: #ffc845;
   --violet: #8b6cff;
 
-  /* Versões de cor usadas em textos (ajustadas para contraste no tema claro) */
   --ink-primary: #ff5a36;
   --ink-accent: #2ec4b6;
   --ink-accent-2: #ffc845;
@@ -167,8 +167,12 @@ h3 {
   font-size: 0.95rem;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: transform var(--transition), background var(--transition),
-    color var(--transition), border-color var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
   font-family: inherit;
 }
 
@@ -219,7 +223,10 @@ h3 {
   inset: 0 0 auto 0;
   z-index: 100;
   padding: 1.1rem 0;
-  transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
+  transition:
+    background var(--transition),
+    padding var(--transition),
+    box-shadow var(--transition);
 }
 
 .header.scrolled {
@@ -245,9 +252,7 @@ h3 {
   line-height: 1.05;
 }
 
-/* Luz em forma de farol atrás do logo do cabeçalho.
-   Quatro cores da paleta do site ficam lado a lado (sem intervalos) e,
-   a cada etapa, trocam de posição, passando gradualmente de uma para outra. */
+/* ---------- Brilho colorido atrás da logo ---------- */
 @property --c1 {
   syntax: "<color>";
   inherits: false;
@@ -307,7 +312,6 @@ h3 {
   }
 }
 
-/* Cada etapa embaralha a paleta: laranja, amarelo, turquesa, violeta */
 @keyframes glow-palette {
   0% {
     --c1: #ff5a36;
@@ -315,24 +319,28 @@ h3 {
     --c3: #2ec4b6;
     --c4: #8b6cff;
   }
+
   25% {
     --c1: #ffc845;
     --c2: #2ec4b6;
     --c3: #8b6cff;
     --c4: #ff5a36;
   }
+
   50% {
     --c1: #2ec4b6;
     --c2: #8b6cff;
     --c3: #ff5a36;
     --c4: #ffc845;
   }
+
   75% {
     --c1: #8b6cff;
     --c2: #ff5a36;
     --c3: #ffc845;
     --c4: #2ec4b6;
   }
+
   100% {
     --c1: #ff5a36;
     --c2: #ffc845;
@@ -347,6 +355,7 @@ h3 {
   color: var(--ink-primary);
 }
 
+/* ---------- Logo personalizada e animação da água ---------- */
 .logo-mark {
   width: 44px;
   height: 44px;
@@ -354,33 +363,39 @@ h3 {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
+  isolation: isolate;
+  background: transparent;
 }
 
-/* A arte é ampliada e centralizada para recortar só o círculo da logo */
 .logo-art {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 124%;
-  aspect-ratio: 762 / 775;
-  transform: translate(-50%, -50%);
-}
-
-.logo-art img {
-  width: 100%;
-  height: 100%;
-}
-
-.logo-art svg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
 
-/* Riacho em fluxo contínuo: duas camadas sobre o traçado do rio.
-   Cada padrão de tracejado repete a cada 30 unidades (pathLength = 100),
-   então animar até -30 gera um loop sem emenda. */
+/* Imagem JPG da logo */
+.logo-art img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Camada SVG que mantém a animação do riacho */
+.logo-art svg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
 .river-base,
 .river-shine {
   fill: none;
@@ -388,7 +403,6 @@ h3 {
   pointer-events: none;
 }
 
-/* Espessuras em unidades do viewBox (762 de largura, ~0,07px por unidade no logo) */
 .river-base {
   stroke: #3d8fe8;
   stroke-width: 24;
@@ -411,6 +425,7 @@ h3 {
   }
 }
 
+/* ---------- Links de navegação ---------- */
 .nav-links {
   display: flex;
   align-items: center;
@@ -451,6 +466,7 @@ h3 {
   z-index: 101;
 }
 
+/* ---------- Alternância de tema ---------- */
 .theme-toggle {
   width: 40px;
   height: 40px;
@@ -461,7 +477,10 @@ h3 {
   background: var(--surface);
   color: var(--text);
   cursor: pointer;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
 }
 
 .theme-toggle:hover {
@@ -475,7 +494,6 @@ h3 {
   height: 20px;
 }
 
-/* Mostra o ícone da ação oposta: sol no tema escuro, lua no tema claro */
 .theme-toggle .icon-moon {
   display: none;
 }
@@ -488,6 +506,7 @@ h3 {
   display: block;
 }
 
+/* ---------- Menu mobile ---------- */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -504,7 +523,9 @@ h3 {
   height: 2px;
   background: var(--text);
   border-radius: 2px;
-  transition: transform var(--transition), opacity var(--transition);
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
 }
 
 .nav-toggle[aria-expanded="true"] span:nth-child(1) {
@@ -582,6 +603,7 @@ h3 {
   100% {
     transform: translate(0, 0) rotate(0deg);
   }
+
   50% {
     transform: translate(-20px, 25px) rotate(12deg);
   }
@@ -651,9 +673,11 @@ h3 {
     opacity: 0;
     transform: translateY(0);
   }
+
   30% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: translateY(16px);
@@ -786,7 +810,10 @@ h3 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 2.2rem;
-  transition: transform var(--transition), border-color var(--transition), background var(--transition);
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    background var(--transition);
 }
 
 .service-card:hover {
@@ -862,7 +889,9 @@ h3 {
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--line);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .project-card:hover {
@@ -1001,7 +1030,9 @@ h3 {
   border-radius: var(--radius-sm);
   font-family: inherit;
   font-size: 0.97rem;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .field input::placeholder,
@@ -1091,7 +1122,9 @@ h3 {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 .reveal.is-visible {
@@ -1099,13 +1132,17 @@ h3 {
   transform: translateY(0);
 }
 
-/* Evita conflito: cards com hover já têm transform próprio */
 .service-card.reveal.is-visible,
 .project-card.reveal.is-visible {
-  transition: opacity 0.8s ease, transform var(--transition), box-shadow var(--transition),
-    border-color var(--transition), background var(--transition);
+  transition:
+    opacity 0.8s ease,
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition),
+    background var(--transition);
 }
 
+/* ---------- Acessibilidade: movimento reduzido ---------- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1122,7 +1159,7 @@ h3 {
   }
 }
 
-/* ---------- Responsivo ---------- */
+/* ---------- Responsivo: tablets ---------- */
 @media (max-width: 1024px) {
   .grid-projects,
   .grid-3 {
@@ -1140,13 +1177,12 @@ h3 {
   }
 }
 
+/* ---------- Responsivo: celulares ---------- */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
   }
 
-  /* backdrop-filter cria um novo contexto para elementos fixos;
-     removê-lo permite que o menu mobile cubra a tela inteira */
   .header.scrolled {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -1163,7 +1199,9 @@ h3 {
     gap: 2rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity var(--transition), visibility var(--transition);
+    transition:
+      opacity var(--transition),
+      visibility var(--transition);
   }
 
   .nav-links.is-open {
@@ -1190,6 +1228,7 @@ h3 {
   }
 }
 
+/* ---------- Responsivo: celulares pequenos ---------- */
 @media (max-width: 480px) {
   .hero-actions .btn {
     width: 100%;
@@ -1200,5 +1239,81 @@ h3 {
   }
 }
 
-/* Integrações Cultura em Movimento */
-.museum-search{max-width:760px;margin:0 auto 2rem}.museum-search label{display:block;margin-bottom:.55rem;font-weight:600}.museum-search-row{display:flex;gap:.75rem}.museum-search-row input{flex:1;min-width:0;padding:.9rem 1rem;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text);font:inherit}.museum-card,.experience-card{padding:1.25rem;border:1px solid var(--line);border-radius:16px;background:var(--surface);min-width:0}.museum-card h3,.experience-card h3{margin:.25rem 0 .65rem}.museum-card p,.experience-card p{margin:.4rem 0;color:var(--text-muted)}.museum-card a,.experience-card a{display:inline-block;margin:.65rem .8rem 0 0;font-weight:600}.experience-frame{width:100%;aspect-ratio:16/10;border:0;border-radius:12px;background:var(--surface-2)}.empty-state{color:var(--text-muted);grid-column:1/-1}.form-feedback.error{color:#d94a4a}@media(max-width:600px){.museum-search-row{flex-direction:column}}
+/* ---------- Integrações Cultura em Movimento ---------- */
+.museum-search {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+}
+
+.museum-search label {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-weight: 600;
+}
+
+.museum-search-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.museum-search-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.museum-card,
+.experience-card {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  min-width: 0;
+}
+
+.museum-card h3,
+.experience-card h3 {
+  margin: 0.25rem 0 0.65rem;
+}
+
+.museum-card p,
+.experience-card p {
+  margin: 0.4rem 0;
+  color: var(--text-muted);
+}
+
+.museum-card a,
+.experience-card a {
+  display: inline-block;
+  margin: 0.65rem 0.8rem 0 0;
+  font-weight: 600;
+}
+
+.experience-frame {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 0;
+  border-radius: 12px;
+  background: var(--surface-2);
+}
+
+.empty-state {
+  color: var(--text-muted);
+  grid-column: 1 / -1;
+}
+
+.form-feedback.error {
+  color: #d94a4a;
+}
+
+/* ---------- Integrações responsivas ---------- */
+@media (max-width: 600px) {
+  .museum-search-row {
+    flex-direction: column;
+  }
+}
